@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dayGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd93d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8c42;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="nightGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="frameGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ecf0f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bdc3c7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Squircle background -->
+  <path d="M 32 8 C 18.745 8 8 18.745 8 32 L 8 96 C 8 109.255 18.745 120 32 120 L 96 120 C 109.255 120 120 109.255 120 96 L 120 32 C 120 18.745 109.255 8 96 8 Z" fill="url(#frameGradient)" stroke="#95a5a6" stroke-width="2"/>
+  
+  <!-- Picture frame (smaller, centered) -->
+  <path d="M 28 24 C 24.686 24 22 26.686 22 30 L 22 98 C 22 101.314 24.686 104 28 104 L 100 104 C 103.314 104 106 101.314 106 98 L 106 30 C 106 26.686 103.314 24 100 24 Z" fill="url(#frameGradient)" stroke="#7f8c8d" stroke-width="1.5"/>
+  
+  <!-- Day side (left half) with clipping -->
+  <defs>
+    <clipPath id="frameClip">
+      <path d="M 28 28 C 26.343 28 25 29.343 25 31 L 25 97 C 25 98.657 26.343 100 28 100 L 100 100 C 101.657 100 103 98.657 103 97 L 103 31 C 103 29.343 101.657 28 100 28 Z"/>
+    </clipPath>
+  </defs>
+  
+  <rect x="25" y="28" width="39" height="72" fill="url(#dayGradient)" clip-path="url(#frameClip)"/>
+  
+  <!-- Night side (right half) -->
+  <rect x="64" y="28" width="39" height="72" fill="url(#nightGradient)" clip-path="url(#frameClip)"/>
+  
+  <!-- Sun icon (day side) -->
+  <circle cx="44" cy="50" r="6" fill="#f39c12"/>
+  <g stroke="#f39c12" stroke-width="1.5" stroke-linecap="round">
+    <line x1="44" y1="38" x2="44" y2="41"/>
+    <line x1="44" y1="59" x2="44" y2="62"/>
+    <line x1="32" y1="50" x2="35" y2="50"/>
+    <line x1="53" y1="50" x2="56" y2="50"/>
+    <line x1="36.64" y1="41.64" x2="38.76" y2="43.76"/>
+    <line x1="49.24" y1="56.24" x2="51.36" y2="58.36"/>
+    <line x1="51.36" y1="41.64" x2="49.24" y2="43.76"/>
+    <line x1="38.76" y1="56.24" x2="36.64" y2="58.36"/>
+  </g>
+  
+  <!-- Moon and stars (night side) -->
+  <path d="M 80 42 C 80 46 77 50 73 50 C 77 50 80 54 80 58 C 80 54 84 50 88 50 C 84 50 80 46 80 42 Z" fill="#f1c40f"/>
+  <circle cx="82" cy="65" r="1.5" fill="#ecf0f1"/>
+  <circle cx="88" cy="68" r="1" fill="#ecf0f1"/>
+  <circle cx="76" cy="70" r="0.8" fill="#ecf0f1"/>
+  
+  <!-- Mountains/landscape silhouette -->
+  <path d="M 25 75 L 32 65 L 40 68 L 48 58 L 56 65 L 64 62 L 72 68 L 80 60 L 88 66 L 96 63 L 103 72 L 103 100 L 25 100 Z" fill="#27ae60" opacity="0.7" clip-path="url(#frameClip)"/>
+  
+  <!-- Slideshow indicator dots -->
+  <circle cx="42" cy="90" r="2" fill="#3498db"/>
+  <circle cx="50" cy="90" r="1.5" fill="#95a5a6"/>
+  <circle cx="58" cy="90" r="1.5" fill="#95a5a6"/>
+  <circle cx="66" cy="90" r="1.5" fill="#95a5a6"/>
+  <circle cx="74" cy="90" r="1.5" fill="#95a5a6"/>
+  <circle cx="82" cy="90" r="1.5" fill="#95a5a6"/>
+</svg>

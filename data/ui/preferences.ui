@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="libadwaita" version="1.0"/>
+  
+  <template class="WallyPreferencesWindow" parent="AdwPreferencesWindow">
+    <property name="title" translatable="yes">Wally - Wallpaper Slideshow Manager</property>
+    <property name="default-width">600</property>
+    <property name="default-height">600</property>
+    <property name="modal">true</property>
+    <property name="search-enabled">false</property>
+    
+    <!-- Single Page Layout -->
+    <child>
+      <object class="AdwPreferencesPage">
+        <property name="name">main</property>
+        <property name="title" translatable="yes">Settings</property>
+        <property name="icon-name">preferences-system-symbolic</property>
+        
+        <!-- Wallpaper Folders Group -->
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Wallpapers</property>
+            
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes">Day Wallpapers Folder</property>
+                <child type="suffix">
+                  <object class="GtkButton" id="day_folder_button">
+                    <property name="label" translatable="yes">Choose Folder</property>
+                    <property name="valign">center</property>
+                    <style>
+                      <class name="flat"/>
+                    </style>
+                  </object>
+                </child>
+              </object>
+            </child>
+            
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes">Use Same Folder for Both Themes</property>
+                <child type="suffix">
+                  <object class="GtkSwitch" id="same_folder_switch">
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            
+            <child>
+              <object class="AdwActionRow" id="night_folder_row">
+                <property name="title" translatable="yes">Night Wallpapers Folder</property>
+                <child type="suffix">
+                  <object class="GtkButton" id="night_folder_button">
+                    <property name="label" translatable="yes">Choose Folder</property>
+                    <property name="valign">center</property>
+                    <style>
+                      <class name="flat"/>
+                    </style>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Settings</property>
+            
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes">Change Interval (minutes)</property>
+                <child type="suffix">
+                  <object class="GtkSpinButton" id="interval_spin">
+                    <property name="valign">center</property>
+                    <property name="width-request">100</property>
+                    <property name="adjustment">
+                      <object class="GtkAdjustment">
+                        <property name="lower">1</property>
+                        <property name="upper">1440</property>
+                        <property name="step-increment">1</property>
+                        <property name="page-increment">5</property>
+                        <property name="value">5</property>
+                      </object>
+                    </property>
+                    <property name="digits">0</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes">Fade Duration (seconds)</property>
+                <child type="suffix">
+                  <object class="GtkScale" id="transition_scale">
+                    <property name="orientation">horizontal</property>
+                    <property name="width-request">200</property>
+                    <property name="valign">center</property>
+                    <property name="adjustment">
+                      <object class="GtkAdjustment">
+                        <property name="lower">0.5</property>
+                        <property name="upper">10.0</property>
+                        <property name="step-increment">0.5</property>
+                        <property name="page-increment">1.0</property>
+                        <property name="value">2.0</property>
+                      </object>
+                    </property>
+                    <property name="digits">1</property>
+                    <property name="draw-value">true</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            
+            <child>
+              <object class="AdwSwitchRow" id="auto_night_mode_switch">
+                <property name="title" translatable="yes">Auto Theme Switching</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Apply</property>
+            
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes">Apply Settings</property>
+                <child type="suffix">
+                  <object class="GtkButton" id="apply_button">
+                    <property name="label" translatable="yes">Apply</property>
+                    <property name="valign">center</property>
+                    <style>
+                      <class name="suggested-action"/>
+                    </style>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

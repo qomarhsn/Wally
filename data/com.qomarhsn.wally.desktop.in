@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Wally
+Comment=Manage wallpaper slideshows for Day and Night themes
+Exec=wally
+Icon=com.qomarhsn.wally
+Terminal=false
+Type=Application
+Categories=GTK;GNOME;Graphics;Photography;
+StartupNotify=true
+Keywords=wallpaper;slideshow;background;theme;gnome;
+MimeType=image/jpeg;image/png;image/bmp;image/webp;image/tiff;image/svg+xml;

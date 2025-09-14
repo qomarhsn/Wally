@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="com.qomarhsn.wally">
+  <schema id="com.qomarhsn.wally" path="/com/qomarhsn/wally/">
+    
+    <!-- Folder paths -->
+    <key name="day-folder-path" type="s">
+      <default>""</default>
+      <summary>Day wallpapers folder path</summary>
+      <description>Path to the folder containing wallpapers for day theme</description>
+    </key>
+    
+    <key name="night-folder-path" type="s">
+      <default>""</default>
+      <summary>Night wallpapers folder path</summary>
+      <description>Path to the folder containing wallpapers for night theme</description>
+    </key>
+    
+    <!-- Slideshow settings -->
+    <key name="slideshow-interval" type="i">
+      <default>300</default>
+      <range min="60" max="3600"/>
+      <summary>Slideshow interval in seconds</summary>
+      <description>Time between wallpaper changes in seconds (60=1min, 300=5min, 600=10min, 1800=30min, 3600=1hr)</description>
+    </key>
+    
+    <key name="transition-duration" type="d">
+      <default>2.0</default>
+      <range min="0.5" max="10.0"/>
+      <summary>Transition animation duration</summary>
+      <description>Duration of fade transition between wallpapers in seconds</description>
+    </key>
+    
+    <!-- Application state -->
+    <key name="slideshow-enabled" type="b">
+      <default>false</default>
+      <summary>Slideshow enabled</summary>
+      <description>Whether the wallpaper slideshow is currently active</description>
+    </key>
+    
+    <key name="auto-night-mode" type="b">
+      <default>true</default>
+      <summary>Automatic night mode switching</summary>
+      <description>Automatically switch between day and night wallpapers based on system theme</description>
+    </key>
+    
+    <key name="use-same-folder" type="b">
+      <default>false</default>
+      <summary>Use same folder for both themes</summary>
+      <description>Use day wallpapers folder for both light and dark themes</description>
+    </key>
+    
+    <!-- Window state -->
+    <key name="window-width" type="i">
+      <default>600</default>
+      <summary>Window width</summary>
+      <description>Width of the preferences window</description>
+    </key>
+    
+    <key name="window-height" type="i">
+      <default>700</default>
+      <summary>Window height</summary>
+      <description>Height of the preferences window</description>
+    </key>
+    
+  </schema>
+</schemalist>

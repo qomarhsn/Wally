@@ -1,0 +1,11 @@
+builddir/
+flatpak/
+*.o
+*.so
+*.a
+*~
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo

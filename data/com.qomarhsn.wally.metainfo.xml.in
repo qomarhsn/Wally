@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.qomarhsn.wally</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>Wally</name>
+  <summary>Manage wallpaper slideshows for Day and Night themes</summary>
+  
+  <description>
+    <p>
+      Wally is a GNOME desktop application that helps you manage wallpaper slideshows
+      with automatic day and night theme switching. Select folders containing your
+      favorite wallpapers for light and dark themes, configure slideshow timing,
+      and let Wally automatically switch between them based on your system theme.
+    </p>
+    <p>Features:</p>
+    <ul>
+      <li>Separate wallpaper collections for day and night themes</li>
+      <li>Automatic theme-based wallpaper switching</li>
+      <li>Configurable slideshow intervals (1 minute to 1 hour)</li>
+      <li>Smooth fade transitions between wallpapers</li>
+      <li>Manual wallpaper skipping</li>
+      <li>GNOME HIG compliant interface using libadwaita</li>
+    </ul>
+  </description>
+  
+  <screenshots>
+    <screenshot type="default">
+      <caption>Main preferences window</caption>
+    </screenshot>
+  </screenshots>
+  
+  <url type="homepage">https://github.com/qomarhsn/wally</url>
+  <url type="bugtracker">https://github.com/qomarhsn/wally/issues</url>
+  
+  <developer_name>Qomar Hsn</developer_name>
+  
+  <launchable type="desktop-id">com.qomarhsn.wally.desktop</launchable>
+  
+  <provides>
+    <binary>wally</binary>
+  </provides>
+  
+  <releases>
+    <release version="1.0.0" date="2024-01-01">
+      <description>
+        <p>Initial release of Wally wallpaper slideshow manager</p>
+      </description>
+    </release>
+  </releases>
+  
+  <content_rating type="oars-1.1"/>
+</component>
