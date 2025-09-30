@@ -26,7 +26,8 @@ jobs:
           glib-networking \
           gsettings-desktop-schemas \
           desktop-file-utils \
-          appstream-util
+          appstream-util \
+          gettext
           
     - name: Build with Meson
       run: |
