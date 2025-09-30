@@ -18,47 +18,50 @@ A modern GNOME desktop application for managing wallpaper slideshows with automa
 
 ## Installation
 
-### Build from Source
+1. Download the AppImage from [Releases](https://github.com/qomarhsn/wally/releases)
+2. Make it executable
+3. Run it
 
-1. **Install Dependencies**:
+<details>
+<summary>Build from Source</summary>
 
-   **Ubuntu/Debian:**
-   ```bash
-   sudo apt install build-essential meson ninja-build pkg-config libgtk-4-dev libadwaita-1-dev
-   ```
+### Dependencies
 
-   **Fedora:**
-   ```bash
-   sudo dnf install gcc-c++ meson ninja-build pkg-config gtk4-devel libadwaita-devel
-   ```
+**Ubuntu/Debian:**
+```bash
+sudo apt install build-essential meson ninja-build pkg-config libgtk-4-dev libadwaita-1-dev
+```
 
-   **Arch Linux:**
-   ```bash
-   sudo pacman -S base-devel meson ninja pkg-config gtk4 libadwaita
-   ```
+**Fedora:**
+```bash
+sudo dnf install gcc-c++ meson ninja-build pkg-config gtk4-devel libadwaita-devel
+```
 
-2. **Build and Install**:
-   ```bash
-   git clone https://github.com/qomarhsn/wally.git
-   cd wally
-   meson setup builddir
-   meson compile -C builddir
-   sudo meson install -C builddir
-   sudo glib-compile-schemas /usr/local/share/glib-2.0/schemas/
-   ```
+**Arch Linux:**
+```bash
+sudo pacman -S base-devel meson ninja pkg-config gtk4 libadwaita
+```
+
+### Build
+```bash
+git clone https://github.com/qomarhsn/wally.git
+cd wally
+meson setup builddir
+meson compile -C builddir
+sudo meson install -C builddir
+sudo glib-compile-schemas /usr/local/share/glib-2.0/schemas/
+```
+
+</details>
+
 
 ## Usage
 
-1. Launch Wally from applications menu or run `wally`
+1. Run the app
 2. Select day and night wallpaper folders
-3. Set interval and transition duration
+3. Set slideshow interval and transition duration
 4. Click "Apply" to start slideshow
 
-## Requirements
-
-- GNOME 44+
-- GTK4 (>= 4.10)
-- libadwaita (>= 1.4)
 
 ## License
 
